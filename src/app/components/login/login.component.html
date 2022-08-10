@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="content">
+        <div class="logo">
+            <img src="../../../assets/logo.png" alt="Logo" class="logo-image" />
+        </div>
+        <div
+            class="error-message"
+            *ngIf="showErrorMessage"
+        >
+            {{errorMessage}}
+        </div>
+        <div class="form">
+            <form #f="ngForm" (ngSubmit)="sendSubmit(f)" novalidate>
+                <div class="row">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" class="form-input" required ngModel/>
+                </div>
+                <div class="row">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" class="form-input" required ngModel/>
+                </div>
+                <div class="row">
+                    <button
+                        class="button"
+                        type="submit"
+                        [disabled]="formSubmitted"
+                    >
+                        {{formSubmitted ? 'Sending' : 'Send'}}
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+.welcome {
+    text-align: center;
+    font-size: 1.5rem;
+    width: 80%;
+}
+
+.welcome-message {
+    font-weight: 700;
+}
+
+.user-name {
+    color: #1C8900;
+}
+
+.welcome-subtitle {
+    color: #23A455;
+}
+
+.button-logout {
+    background-color: #7A7A7A;
+    border-radius: 5px;
+    border: 1px solid white;
+    color: white;
+    padding: 0.5rem;
+}

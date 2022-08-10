@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="content welcome">
+        <h3 class="welcome-message">Welcome <span class="user-name">{{user?.name}}</span> </h3>
+        <p class="welcome-subtitle">
+            To MyValleGroup
+        </p>
+        <div>
+            <button class="button-logout" (click)="doLogout()">
+                {{submitted ? 'Loggin out' : 'Logout'}}
+            </button>
+        </div>
+    </div>
+</div>
