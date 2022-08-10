@@ -61,12 +61,6 @@ export class ApiService {
    * @returns promise with endpoint response
    */
   async post (endpoint, data) {
-    const access_credentials = JSON.parse(sessionStorage.getItem('access_credentials'));
-    let headers = new HttpHeaders({
-      'Authorization': `Bearer ${access_credentials.access_token}`,
-      'Content-Type': `application/json`,
-      'accept': 'application/json'
-    });
-    return this.httpClient.post(`${this.baseUrl}${endpoint}`, data, {headers}).toPromise();
+    return this.httpClient.post(`${this.baseUrl}${endpoint}`, data).toPromise();
   }
 }

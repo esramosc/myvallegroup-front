@@ -75,7 +75,7 @@ export class LoginComponent implements OnInit {
       this.router.navigateByUrl('home');
     }, error => {
       this.showErrorMessage = true;
-      this.errorMessage = error.error;
+      this.errorMessage = error.error.error;
       this.formSubmitted = false;
     } );
   }
